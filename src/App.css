@@ -1,0 +1,157 @@
+body {
+  font-family: "CookieRun-Regular", sans-serif;
+  background-color: #ffdc21;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 3rem 0;
+  width: 80%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.game-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.game-board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.game-score {
+  font-size: 14px;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.game-reset {
+  background-color: red;
+  border: none;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.game-reset:hover {
+  background-color: darkred;
+  transform: scale(1.1);
+}
+
+.game-box {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.user-title {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.box:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 80%;
+  background-color: #ddd;
+}
+
+.item-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.result {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.win .result {
+  color: red;
+}
+
+.win .user-title,
+.win .item-img {
+  transform: scale(1.2);
+}
+
+.draw {
+  color: black;
+}
+
+.draw .user-title,
+.draw .item-img {
+  transform: scale(1);
+}
+
+.game-button-wrap {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
